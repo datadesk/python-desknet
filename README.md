@@ -1,5 +1,6 @@
 # python-desknet
-A simple Python wrapper for Desk-Net.com's API
+
+A simple Python wrapper for Desk-Net.com's API. Under construction. Do not expect it to work.
 
 
 Name | URL
