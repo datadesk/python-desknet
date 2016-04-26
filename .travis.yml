@@ -9,4 +9,5 @@ cache:
   - pip
 
 script:
+  - flake8 desknet
   - python setup.py test
