@@ -1,7 +1,5 @@
 
 
-
-
 class DeskNet(object):
     """
     A client for interacting with the Desk-Net.com API.
