@@ -32,7 +32,7 @@ Creating a new client that can talk to the API
 client = DeskNet("your_client_name", "your_client_secret")
 ```
 
-Create a new element by submitting keyword arguments that correspond [what's supported by DeskNet](http://api.desk-net.com/#api-Element-CreateElement). A dictionary is returned with what was saved to the site, including a unique identifier.
+Create a new element by submitting keyword arguments that correspond [what's supported by DeskNet](http://api.desk-net.com/#api-Element-CreateElement). There is no cleaning or preprocessing. DeskNet has to like what you submit. A dictionary is returned with what was saved to the site, including a unique identifier.
 
 ```python
 element = client.create(title='This is my budget item')
