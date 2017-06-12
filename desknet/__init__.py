@@ -18,6 +18,9 @@ class DeskNet(object):
         api_url="https://desk-net.com/api/v1_0_1/elements/",
         verbosity=1
     ):
+        """
+        Create and return a new DeskNet client object.
+        """
         self.desknet_user = desknet_user
         self.desknet_secret = desknet_secret
         self.auth_headers = {
@@ -32,6 +35,9 @@ class DeskNet(object):
         self.access_headers = None
 
     def auth(self):
+        """
+        Authenticate the user name and secret with the API. 
+        """
         logger.debug("Authorizing credentials")
         resp = requests.post(self.auth_url, params=self.auth_headers)
         self.access_token = resp.json()['access_token']
