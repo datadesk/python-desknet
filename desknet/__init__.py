@@ -36,7 +36,7 @@ class DeskNet(object):
 
     def auth(self):
         """
-        Authenticate the user name and secret with the API. 
+        Authenticate the user name and secret with the API.
         """
         logger.debug("Authorizing credentials")
         resp = requests.post(self.auth_url, params=self.auth_headers)
