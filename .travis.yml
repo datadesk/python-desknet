@@ -17,6 +17,9 @@ script:
   - coverage run setup.py test
   - coverage report -m
 
+after_success:
+ - coveralls
+
 env:
   global:
   - secure: qBONfI3LKSxDeFKo7sO8CRPfqZVv37HMuaIK6BdK0hmz9DmBFHLOovO/a9ke307PuoTJopDLvJYqnHlYyhzadhU9Cir37QnZvZKIn/jP+9TLVI9i5BLO2g8isl6at7oJBdc21nRdofmZC76hNb7iB+r+A7qsHkgDhLjPdW/8c7aKLVZ0Z//V+vRhicm3It7IyTAZG+FiOXQsONrT00Tpnmr+eK6JKfPDPlno+I9zVlTwdNZpQqxhue0zWW2W3V3Oq3C6cYXfPwmT2MwgAua4yzFxuG0u0VWR41Cz+Uz+F3ycXy7xCKIQY9tqy+2vzoGi1D7JBRu7qWTY4rfLaexXO9QToyepdb4kbKEkvgKhIluKfBy3eglhqnxZ+QDYcCyIdZ+N8UlN8ixwMWZa9GOEBrB3of0vBkcBUVb0byZUk1OW9Xg12IJdN0HaIJW3Fnf+aN3LVlE1Xfsf8g3aXjIePh5mZqyH5P+nTLSv5FMdq5sQrn2zy2u8QT7Em4DmptxfwimitIpr42uZWoMtrS+aDppJPd9NXEd/d3ArjWxmZ1SZrjWMGLscRXdEU+ewp5k5ReYYl/ul/+cpaSKWhiMdgo+vrX9wWsOqTVwyJnJGgk6hx3lMLBLCy9/EWeludp2T622qIvXYNExRsc3upPS3Its79Hj0tAtcB97D0mvQWmQ=
