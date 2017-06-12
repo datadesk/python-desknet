@@ -59,4 +59,4 @@ class DeskNet(object):
             self.auth()
 
         # Make the request to DeskNet API
-        return self.post(**kwargs)
+        return self.post(kwargs)
