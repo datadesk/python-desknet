@@ -14,7 +14,7 @@ class DeskNetTest(unittest.TestCase):
     def setUp(self):
         self.desknet_user = os.environ['DESKNET_USER']
         self.desknet_secret = os.environ['DESKNET_SECRET']
-        self.test_groups = [9229371,]
+        self.test_groups = [9229371]
         self.test_publications = [{
             'category': 9380971,
             'single': {
@@ -42,6 +42,6 @@ class DeskNetTest(unittest.TestCase):
         self.assertEqual(obj['groups'], self.test_groups)
         self.assertEqual(obj['note'], "This is a test note")
         self.assertEqual(obj['publications'][0]['category'], self.test_publications[0]['category'])
-        self.assertTrue(obj.has_key('id'))
-        self.assertTrue(obj.has_key('version'))
-        self.assertTrue(obj.has_key('modificationDate'))
+        self.assertTrue('id' in obj.keys())
+        self.assertTrue('version' in obj.keys())
+        self.assertTrue('modificationDate' in obj.keys())

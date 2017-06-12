@@ -44,28 +44,19 @@ class DeskNet(object):
         """
         Make and return a POST request to the DeskNet API.
         """
-        logger.debug("POSTING to the DeskNet API")
+        logger.debug("POSTing to the DeskNet API")
         response = requests.post(self.api_url, headers=self.access_headers, data=json.dumps(payload))
         return response.json()
 
-    def create(self, title=None, groups=None, note=None, publications=None):
+    def create(self, **kwargs):
         """
         Creates and returns a new DeskNet item as a dict
         """
+        logger.debug("Creating new element")
+
         # Auth if we need to...
         if not self.access_token:
             self.auth()
 
-        # Prepare the data
-        data = {}
-        if title:
-            data['title'] = title
-        if groups:
-            data['groups'] = groups
-        if note:
-            data['note'] = note
-        if publications:
-            data['publications'] = publications
-
         # Make the request to DeskNet API
-        return self.post(data)
+        return self.post(**kwargs)
